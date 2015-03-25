@@ -57,6 +57,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
         }
       }
     }) 
+
+    .state('app.add-community', {
+      url: "/add-community",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/add-community.html",
+          controller: 'AddCommunityCtrl'
+        }
+      }
+    }) 
+
+
     .state('app.playlists', {
       url: "/playlists",
       views: {

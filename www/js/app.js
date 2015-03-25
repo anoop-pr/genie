@@ -48,6 +48,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
       }
     }
   })
+    .state('app.community', {
+      url: "/community",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/community.html",
+          controller: 'CommunityCtrl'
+        }
+      }
+    }) 
     .state('app.playlists', {
       url: "/playlists",
       views: {
@@ -68,5 +77,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/community');
 });

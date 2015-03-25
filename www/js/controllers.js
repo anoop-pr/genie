@@ -33,7 +33,11 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope, $ionicPopup, $ionicLoading) {
+.controller('CommunityCtrl', function($scope, $ionicPopup, $ionicLoading) {
+  $scope.playlists = [];
+})
+
+/*.controller('PlaylistsCtrl', function($scope, $ionicPopup, $ionicLoading) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -48,21 +52,8 @@ angular.module('starter.controllers', [])
       template: '<ion-spinner icon="android"></ion-spinner>',
       duration : 2000
     });
-   // var confirmPopup = $ionicPopup.confirm({
-   //   title: 'Consume Ice Cream',
-   //   template: 'Are you sure you want to eat this ice cream?'
-   // });
-   // confirmPopup.then(function(res) {
-   //   if(res) {
-   //     console.log('You are sure');
-   //   } else {
-   //     console.log('You are not sure');
-   //   }
-   // });
  };
-
-
-})
+})*/
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })

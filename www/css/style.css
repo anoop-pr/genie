@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+img {
+	width: 100%;
+}
+i {
+	font-size: 25px;
+}
+.dividerdemoBasicUsage .face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 48px;
+  margin: 16px; }
+}

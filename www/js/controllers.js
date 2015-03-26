@@ -115,29 +115,24 @@ angular.module('starter.controllers', [])
 
 })
 
-
-
-
-/*.controller('PlaylistsCtrl', function($scope, $ionicPopup, $ionicLoading) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-
-  $scope.showConfirm = function() {
-   $ionicLoading.show({
-      template: '<ion-spinner icon="android"></ion-spinner>',
-      duration : 2000
-    });
- };
-})*/
-
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
+.controller('HomeCtrl', function($scope, $stateParams) {
+  
+})
+.controller('TaskCtrl', function($scope, $stateParams, $ionicModal) {
+
+  $ionicModal.fromTemplateUrl('templates/login.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $(document).on('click', '.cal-highlight-event', function() {
+    $scope.modal.show();
+  })
+})
+
 .controller('SearchCtrl', function($scope, $stateParams, $ionicPopup, $mdToast) {
   
   $scope.toastPosition = {
@@ -237,4 +232,82 @@ $scope.data = {
     { id: 9 }  
   ];
 
-});
+}).directive('calendar', ['$compile', function ($compile) {
+
+  var monthNames = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+  var days = ['s', 'm', 't', 'w', 't', 'f', 's'];
+
+  var isLeapYear = function (year) {
+    return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+  };
+
+  var daysInMonth = function (date) {
+    return [31, (isLeapYear(date.getYear()) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][date.getMonth()];
+  };
+
+  var formatDateHeading = function (date) {
+    var m = monthNames[date.getMonth()];
+    return m.charAt(0).toUpperCase() + m.slice(1) + ' ' + date.getFullYear();
+  };
+
+  var currentDate = new Date();
+
+  function getTemplate(month, year, dates) {
+
+    var month = ((isNaN(month) || month == null) ? currentDate.getMonth() + 1 : month) - 1,
+      year = (isNaN(year) || year == null) ? currentDate.getFullYear() : year,
+      firstDay = new Date(year, month, 1),
+      startDay = firstDay.getDay(),
+      monthLength = daysInMonth(firstDay),
+      heading = formatDateHeading(firstDay);
+
+    if (!dates || !dates.length) dates = [currentDate.getDate()];
+
+    var tpl = [
+      '<div class="cal">',
+      '<table class="cal">',
+      '<tr><th colspan="7">' + heading + '</th></tr>',
+      '<tr>'];
+
+    days.forEach(function (day) {
+      tpl.push('<td class="cal-head">' + day.toUpperCase() + '</td>');
+    });
+    tpl.push('</tr>');
+
+    var day = 1,
+      rows = Math.ceil((monthLength + startDay) / 7);
+
+    for (i = 0; i < rows; i++) {
+      var row = ['<tr>'];
+      for (j = 0; j < 7; j++) {
+        row.push('<td>');
+        if (day <= monthLength && (i > 0 || j >= startDay)) {
+          if (day == 30 || day == 31) {
+            row.push('<div class="cal-day cal-highlight-event" data-cal="' + year + '/' + month + '/' + day + '">');
+          } else if (dates.indexOf(day) != -1)  {
+            row.push('<div class="cal-day cal-highlight" data-cal="' + year + '/' + month + '/' + day + '">');
+          } else if (dates.indexOf(day) == -1){
+            row.push('<div class="cal-day" data-cal="' + year + '/' + month + '/' + day + '">');
+          }
+          row.push(day + '</div>');
+          day++;
+        }
+        row.push('</td>');
+      }
+      row.push('</tr>');
+      tpl.push(row.join(''));
+    }
+    tpl.push('</table></div>');
+
+    return tpl.join('');
+  }
+
+  return {
+    restrict: 'A',
+    replace: true,
+    link: function ($scope, $element, attrs) {
+      $element.html(getTemplate(parseInt(attrs.month), parseInt(attrs.year), []));
+      $compile($element.contents());
+    }
+  };
+}]);;

@@ -54,7 +54,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
       url: "/home",
       views: {
         'menuContent': {
-          templateUrl: "templates/home.html"  
+          templateUrl: "templates/home.html",
+          controller: "HomeCtrl"
+        }
+      }
+    }) 
+
+    .state('app.tasks', {
+      url: "/tasks",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/my-tasks.html",
+          controller: "TaskCtrl"
         }
       }
     }) 

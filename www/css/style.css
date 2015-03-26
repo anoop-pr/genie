@@ -6,6 +6,15 @@ img {
     font-size: 25px;
 }*/
 
+
+.app-bg {
+    background: #eceff1;
+}
+
+.com-card {
+    background: #fff;
+}
+
 .com-card .com-heading {
     margin-bottom: 7px;
     white-space: nowrap;
@@ -62,3 +71,107 @@ img {
 a.community-card  {
     text-decoration: none;
 }
+.listdemoBasicUsage .face {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50px;
+  margin: 16px; 
+}
+
+.people .face {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.people .list-heading {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.profile-img {
+    position: relative;
+}
+
+.profile-img > .info-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    color: #fff;
+}
+
+
+.info-content-wrap {
+    position: relative;
+}
+
+.info-content {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+.info-content > span {
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: solid 1px rgba(255,255,255, 0.5);
+}
+
+.info-content > span:last-child {
+    border-right: none;
+}
+
+.info-content > span:first-child {
+    margin-left: 10px;
+}
+
+.seek-help {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #eee;
+}
+
+.btn-seek-help {
+    width: 70%;
+}
+
+
+.card.tasks {
+    border-top: solid 2px #387ef5;
+    position: relative;
+}
+
+.card.tasks .card-title {
+    font-weight: 500;
+    /*margin-bottom: 10px;*/
+}
+
+.card.tasks .card-content {
+    color: #727272;
+}
+
+.task-completed {
+    font-size: 25px;
+    color: #4cd964;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.no-margin-bottom { margin-bottom: 0; }
+.no-padding-bottom { padding-bottom: 0; }
+.position-relative { position: relative; }
+.block { display: block; }

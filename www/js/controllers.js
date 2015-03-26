@@ -34,7 +34,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CommunityCtrl', function($scope, $location) {
-  $scope.playlists = [];
+  $scope.data = [];
   $scope.goToAdd = function() {
     $location.path('app/add-community');
 
@@ -43,8 +43,17 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AddCommunityCtrl', function($scope, $ionicPopup, $ionicLoading) {
-  $scope.playlists = [];
+  $scope.data = [];
 })
+
+.controller('PeopleCtrl', function($scope, $ionicPopup, $ionicLoading) {
+  $scope.data = [];
+  $scope.goToAdd = function() {
+    
+  }
+})
+
+
 
 
 /*.controller('PlaylistsCtrl', function($scope, $ionicPopup, $ionicLoading) {

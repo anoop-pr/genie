@@ -46,11 +46,17 @@ angular.module('starter.controllers', [])
   $scope.data = [];
 })
 
-.controller('PeopleCtrl', function($scope, $ionicPopup, $ionicLoading) {
+.controller('PeopleCtrl', function($scope, $location) {
   $scope.data = [];
+  
   $scope.goToAdd = function() {
-    
+    $location.path('app/add-community');
   }
+
+  $scope.showMap = function() {
+    $location.path('app/add-community');
+  }
+
 })
 
 

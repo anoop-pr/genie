@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
     margin-right: 10px;
     padding-right: 10px;
     border-right: solid 1px rgba(255,255,255, 0.5);
+    white-space: nowrap;
 }
 
 .info-content > span:last-child {
@@ -165,7 +166,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
 }
 
 .card.tasks .card-title {
-    font-weight: 500;
+    font-weight: bold;
     /*margin-bottom: 10px;*/
 }
 
@@ -292,7 +293,7 @@ div.cal {
 
 .pending-action-btns {
     position: absolute;
-    top: 10px;
+    top: 18px;
     right: 10px;
 }
 
@@ -307,6 +308,13 @@ div.cal {
     left: 0;
 }
 
+.icon-btn {
+    border-color: transparent !important;
+    padding: 0 7px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
 .pull-left { float: left; }
 .pull-right { float: right; }
 .inline { display: inline; }
@@ -314,8 +322,10 @@ div.cal {
 .no-padding-bottom { padding-bottom: 0; }
 .position-relative { position: relative; }
 .block { display: block; }
+<<<<<<< Updated upstream
 .platform-android .bar .title {text-transform: uppercase; font-size: 16px;}
 md-tabs.md-default-theme md-tabs-ink-bar {
     background-color: #ffc107;
     height: 4px;
 }
+.no-wrap { white-space: nowrap; }

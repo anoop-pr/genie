@@ -1,13 +1,60 @@
 /* Empty. Add your own CSS if you like */
 img {
-	width: 100%;
+    width: 100%;
 }
-i {
-	font-size: 25px;
+/*i {
+    font-size: 25px;
+}*/
+
+.com-card .com-heading {
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.dividerdemoBasicUsage .face {
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  width: 48px;
-  margin: 16px; }
+
+.com-card .com-sub-heading {
+    margin-bottom: 10px;
+    margin-top: 0;
+    line-height: 120%;
+    color: #727272;
+}
+
+.com-card .com-card-content {
+    padding: 12px;
+}
+
+.com-card .com-card-footer {
+    padding: 0px;
+    margin: -12px;
+}
+
+.com-card .com-card-footer.border {
+    margin-top: 0;
+    border-top: solid 1px #eaeaea;
+}
+
+.com-card .com-card-footer .info > span {
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 5px;
+    font-size: 90%;
+    vertical-align: middle;
+}
+
+.com-card .com-card-footer .info > i { 
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.com-card .com-card-footer .info.admin { 
+    color: #ffc107;
+}
+
+.com-card .com-card-footer .info.muted {
+    color: #727272;
+}
+
+.text-muted {
+    color: #727272;
 }

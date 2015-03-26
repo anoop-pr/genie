@@ -133,7 +133,7 @@ angular.module('starter.controllers', [])
   $scope.seekhelp = function() {
     $scope.modal2.show();
   }
-  
+
 })
 
 .controller('SearchCtrl', function($scope, $stateParams, $ionicPopup, $mdToast) {

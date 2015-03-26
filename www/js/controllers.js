@@ -117,10 +117,18 @@ angular.module('starter.controllers', [])
   
 })
 .controller('TaskCtrl', function($scope, $stateParams, $ionicModal) {
-  $scope.show_task = false;
   $(document).on('click', '.cal-highlight-event', function() {
-      $scope.show_task = true;
+      $scope.modal.show();
   });
+
+  $ionicModal.fromTemplateUrl('templates/tasks.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.closeTasks = function() {
+    $scope.modal.hide();
+  };
 
   $ionicModal.fromTemplateUrl('templates/seek-help.html', {
     scope: $scope

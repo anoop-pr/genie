@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar align-title="left" class="bar-positive">
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeAdd()">
+      	<i class="ion-android-arrow-back"></i>
+      </button>
+      
+    <h1 class="title">Add Task</h1>
+    <button class="button button-clear" ng-click="closeAdd()">
+      	<i class="ion-android-done"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+	<div class="content padding">
+		<!-- <h2>Your Message</h2> -->
+		<div class="list list-inset">
+		  	<label class="item item-input">
+		    	<input type="text" placeholder="Task Name">
+		  	</label>
+		  	<label class="item item-input">
+		    	<textarea rows="10" placeholder="Description"></textarea>
+		  	</label>
+		  	<label class="item item-input">
+		    	<input type="text" placeholder="Time">
+		  	</label>
+			<!-- <div class="content padding" layout="row" style="padding-left:0;" layout-align="center left">
+				<button class="button button-positive" ng-click="openFileDialog()">
+					<i class="icon ion-camera"></i>
+					Upload Image
+				</button>
+		  	</div> -->
+		</div>
+	</div>
+  </ion-content>
+</ion-modal-view>

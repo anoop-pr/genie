@@ -1,18 +1,18 @@
 <ion-modal-view>
   <ion-header-bar align-title="left" class="bar-positive">
     <div class="buttons">
-      <button class="button button-clear" ng-click="saveCommunity()">
-      	<i class="ion-android-done"></i>
+      <button class="button button-clear" ng-click="closeAdd()">
+      	<i class="ion-android-arrow-back"></i>
       </button>
       
-    <h1 class="title">Location</h1>
-    <button class="button button-clear" ng-click="closeAdd()">
-      	<i class="ion-android-close"></i>
+    <h1 class="title">Add Community</h1>
+    <button class="button button-clear" ng-click="saveCommunity()">
+      	<i class="ion-android-done"></i>
       </button>
     </div>
   </ion-header-bar>
   <ion-content>
-    <div class="list">
+    <!-- <div class="list">
 		<label class="item item-input item-floating-label">
 			<span class="input-label">Name</span>
 			<input type="text" placeholder="Name of your community">
@@ -32,6 +32,36 @@
 <input type="date" placeholder="Start Date">
 		<button class="button icon ion-filing" ng-click="openFileDialog()">openFileDialog</button>
 		<input type="file" id="file" style="display: none;" />		
+	</div> -->
+	<div class="content padding">
+		<!-- <h2>Your Message</h2> -->
+		<div class="list list-inset">
+		  	<label class="item item-input">
+		    	<input type="text" placeholder="Name">
+		  	</label>
+		  	<label class="item item-input">
+		    	<textarea rows="10" placeholder="Description"></textarea>
+		  	</label>
+		  	<label class="item item-input item-select">
+			    <div class="input-label">
+			    	Community Type
+			    </div>
+			    <select>
+			      	<option selected>Private</option>
+			      	<option>Public</option>
+			    </select>
+			</label>
+
+		  	<label class="item item-input">
+		    	<input type="text" placeholder="Invite Members">
+		  	</label>
+			<div class="content padding" layout="row" style="padding-left:0;" layout-align="center left">
+				<button class="button button-positive" ng-click="openFileDialog()">
+					<i class="icon ion-camera"></i>
+					Upload Image
+				</button>
+		  	</div>
+		</div>
 	</div>
   </ion-content>
 </ion-modal-view>

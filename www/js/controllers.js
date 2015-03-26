@@ -79,8 +79,15 @@ angular.module('starter.controllers', [])
   $scope.data = [];
   
   $scope.goToAdd = function() {
-    $location.path('app/add-community');
+    $scope.modal3.show();
   }
+
+  $ionicModal.fromTemplateUrl('templates/add-task.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal3 = modal;
+  });
+
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -107,6 +114,9 @@ angular.module('starter.controllers', [])
 
   $scope.closeHelp = function() {
     $scope.modal2.hide();
+  };
+  $scope.closeAdd = function() {
+    $scope.modal3.hide();
   };
 
   $scope.seekhelp = function() {

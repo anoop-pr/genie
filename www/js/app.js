@@ -80,6 +80,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
       }
     }) 
 
+    .state('app.add-task', {
+      url: "/add-task",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/add-task.html",
+          controller: 'CommunityCtrl'
+        }
+      }
+    }) 
+
     .state('app.community-details', {
       url: "/community-details/:name",
       views: {

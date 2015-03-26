@@ -1,13 +1,30 @@
 <ion-modal-view>
-  	<ion-header-bar class="bar-positive">
-		<h1 class="title">Seek Help</h1>
-		<div class="buttons">
-	  		<button class="button button-clear" ng-click="closeHelp()"><i class="icon ion-android-close"></i></button>
-		</div>
-  	</ion-header-bar>
+  	<ion-header-bar align-title="left" class="bar-positive">
+	    <div class="buttons">
+	     	<button class="button button-clear">
+	      		<i class="ion-android-done"></i>
+	      	</button>
+		    <h1 class="title">Seek Help</h1>
+		    <button class="button button-clear" ng-click="closeHelp()">
+		      	<i class="ion-android-close"></i>
+		     </button>
+	    </div>
+	</ion-header-bar>
+
+  	<ion-header-bar align-title="left" class="bar-positive">
+	    <div class="buttons">
+	     	<button class="button button-clear" ng-click="saveCommunity()">
+	      		<i class="ion-android-done"></i>
+	      	</button>
+		    <h1 class="title">Seek Help</h1>
+		    <button class="button button-clear" ng-click="closeHelp()">
+		      	<i class="ion-android-close"></i>
+		     </button>
+	    </div>
+	</ion-header-bar>
   	<ion-content>
 		<div class="content padding">
-			<h2>Your Message</h2>
+			<!-- <h2>Your Message</h2> -->
 			<div class="list list-inset">
 			  	<label class="item item-input">
 			    	<input type="text" placeholder="Subject">
@@ -25,7 +42,7 @@
 				      	<option>Kids</option>
 				    </select>
 				</label>
-			  	<button class="button button-block button-positive">Submit</button>
+			  	<!-- <button class="button button-block button-positive">Submit</button> -->
 			</div>
 		</div>
   	</ion-content>

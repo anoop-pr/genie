@@ -1,6 +1,19 @@
-<ion-view view-title="Create Community">
+<ion-view view-title="New Community">
+  <ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-checkmark" ng-click="saveCommunity()"></button>
+	</ion-nav-buttons>
   <ion-content>
   <!-- Content Starts Here -->
+	<div class="list">
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Name</span>
+			<input type="text" placeholder="Name of your community">
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Description</span>
+			<input type="text" placeholder="Short description about your community">
+		</label>
+	</div>
 
   <!-- Content Ends Here -->
   </ion-content>

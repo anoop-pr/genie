@@ -49,8 +49,17 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('AddCommunityCtrl', function($scope, $ionicPopup, $ionicLoading) {
+.controller('AddCommunityCtrl', function($scope, $ionicPopup, $ionicLoading, $timeout, $location) {
   $scope.data = [];
+  $scope.saveCommunity = function() {
+    $ionicLoading.show({
+      template: '<ion-spinner icon="android"></ion-spinner>'
+    });
+    $timeout(function() {
+      $ionicLoading.hide();
+      $location.path('app/community');
+    }, 1500);
+  }
 })
 
 .controller('PeopleCtrl', function($scope, $location, $ionicModal) {

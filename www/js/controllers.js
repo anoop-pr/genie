@@ -96,12 +96,6 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
 
-  $ionicModal.fromTemplateUrl('templates/seek-help.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal2 = modal;
-  });
-
   // Triggered in the login modal to close it
   $scope.closeMap = function() {
     $scope.modal.hide();
@@ -112,17 +106,9 @@ angular.module('starter.controllers', [])
     $scope.modal.show();
   };
 
-  $scope.closeHelp = function() {
-    $scope.modal2.hide();
-  };
   $scope.closeAdd = function() {
     $scope.modal3.hide();
   };
-
-  $scope.seekhelp = function() {
-    $scope.modal2.show();
-  }
-
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
@@ -131,16 +117,23 @@ angular.module('starter.controllers', [])
   
 })
 .controller('TaskCtrl', function($scope, $stateParams, $ionicModal) {
-
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
+  $scope.show_task = false;
+  $(document).on('click', '.cal-highlight-event', function() {
+      $scope.show_task = true;
   });
 
-  $(document).on('click', '.cal-highlight-event', function() {
-    $scope.modal.show();
-  })
+  $ionicModal.fromTemplateUrl('templates/seek-help.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal2 = modal;
+  });
+  $scope.closeHelp = function() {
+    $scope.modal2.hide();
+  };
+  $scope.seekhelp = function() {
+    $scope.modal2.show();
+  }
+  
 })
 
 .controller('SearchCtrl', function($scope, $stateParams, $ionicPopup, $mdToast) {
@@ -292,8 +285,8 @@ $scope.data = {
       for (j = 0; j < 7; j++) {
         row.push('<td>');
         if (day <= monthLength && (i > 0 || j >= startDay)) {
-          if (day == 30 || day == 31) {
-            row.push('<div class="cal-day cal-highlight-event" data-cal="' + year + '/' + month + '/' + day + '">');
+          if (day == 30) {
+            row.push('<div class="cal-day cal-highlight-event" data-cal="' + year + '/' + month + '/' + day + '"><span class="inner-task-count">7</span>');
           } else if (dates.indexOf(day) != -1)  {
             row.push('<div class="cal-day cal-highlight" data-cal="' + year + '/' + month + '/' + day + '">');
           } else if (dates.indexOf(day) == -1){

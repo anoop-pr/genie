@@ -275,6 +275,7 @@ div.cal {
           border-bottom:3px solid #fd910E;
           color: #000;
           cursor: pointer;
+          position: relative;
         }
         div.cal div.cal-day:hover {
           border: 1px solid #111;
@@ -294,3 +295,13 @@ div.cal {
 
 .pull-left { float: left; }
 .pull-right { float: right; }
+.inner-task-count {
+    width:auto;
+    padding:0px 5px;
+    border-radius:23px;
+    background-color: red;
+    color:#fff;
+    position: absolute;
+    top:0;
+    left: 0;
+}

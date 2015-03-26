@@ -33,11 +33,34 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('CommunityCtrl', function($scope, $location) {
+.controller('CommunityCtrl', function($scope, $location, $ionicModal, $ionicLoading, $timeout) {
   $scope.data = [];
-  $scope.goToAdd = function() {
-    $location.path('app/add-community');
+  $scope.goToAdd = function() { 
+    $scope.modal.show();
+  }
 
+  $scope.closeAdd = function() {
+    $scope.modal.hide();
+  }
+// Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/add-community.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.saveCommunity = function() {
+    $ionicLoading.show({
+      template: '<ion-spinner icon="android"></ion-spinner>'
+    });
+    $timeout(function() {
+      $ionicLoading.hide();
+      $scope.modal.hide();
+    }, 1500);
+  }
+
+  $scope.openFileDialog = function() {
+    ionic.trigger('click', { target: document.getElementById('file') });
   }
 
 })
@@ -46,20 +69,10 @@ angular.module('starter.controllers', [])
   $scope.data = {
     title : $stateParams.name
   }
-
 })
 
 .controller('AddCommunityCtrl', function($scope, $ionicPopup, $ionicLoading, $timeout, $location) {
   $scope.data = [];
-  $scope.saveCommunity = function() {
-    $ionicLoading.show({
-      template: '<ion-spinner icon="android"></ion-spinner>'
-    });
-    $timeout(function() {
-      $ionicLoading.hide();
-      $location.path('app/community');
-    }, 1500);
-  }
 })
 
 .controller('PeopleCtrl', function($scope, $location, $ionicModal) {

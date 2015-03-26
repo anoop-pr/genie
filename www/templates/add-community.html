@@ -1,10 +1,18 @@
-<ion-view view-title="New Community">
-  <ion-nav-buttons side="right">
-		<button class="button button-icon button-clear ion-checkmark" ng-click="saveCommunity()"></button>
-	</ion-nav-buttons>
+<ion-modal-view>
+  <ion-header-bar align-title="left" class="bar-positive">
+    <div class="buttons">
+      <button class="button button-clear" ng-click="saveCommunity()">
+      	<i class="ion-android-done"></i>
+      </button>
+      
+    <h1 class="title">Location</h1>
+    <button class="button button-clear" ng-click="closeAdd()">
+      	<i class="ion-android-close"></i>
+      </button>
+    </div>
+  </ion-header-bar>
   <ion-content>
-  <!-- Content Starts Here -->
-	<div class="list">
+    <div class="list">
 		<label class="item item-input item-floating-label">
 			<span class="input-label">Name</span>
 			<input type="text" placeholder="Name of your community">
@@ -13,12 +21,26 @@
 			<span class="input-label">Description</span>
 			<input type="text" placeholder="Short description about your community">
 		</label>
-		<md-select name="myModel" placeholder="Pick">
-        <md-option value="1">One</md-option>
-        <md-option value="2">Two</md-option>
-      </md-select>
-	</div>
 
-  <!-- Content Ends Here -->
+		<label class="item item-input item-select">
+			<div class="input-label">Access type </div>
+			<select>
+				<option>Private</option>
+				<option>Public</option>
+			</select>
+		</label>
+
+		<button class="button icon ion-filing" ng-click="openFileDialog()">openFileDialog</button>
+		<input type="file" id="file" style="display: none;" />		
+	</div>
   </ion-content>
-</ion-view>
+</ion-modal-view>
+
+
+<!-- <ion-view view-title="New Community">
+  <ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-checkmark" ng-click=""></button>
+	</ion-nav-buttons>
+  <ion-content>
+  </ion-content>
+</ion-view> -->

@@ -76,6 +76,12 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
 
+  $ionicModal.fromTemplateUrl('templates/seek-help.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal2 = modal;
+  });
+
   // Triggered in the login modal to close it
   $scope.closeMap = function() {
     $scope.modal.hide();
@@ -86,6 +92,13 @@ angular.module('starter.controllers', [])
     $scope.modal.show();
   };
 
+  $scope.closeHelp = function() {
+    $scope.modal2.hide();
+  };
+
+  $scope.seekhelp = function() {
+    $scope.modal2.show();
+  }
 
 })
 

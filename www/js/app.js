@@ -100,6 +100,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
       }
     })
 
+    .state('app.seek-help', {
+      url: "/seek-help",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/seek-help.html"
+        }
+      }
+    })
 
     .state('app.add-community', {
       url: "/add-community",

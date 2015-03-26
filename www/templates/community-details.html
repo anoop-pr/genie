@@ -1,9 +1,94 @@
   
-<ion-view view-title="{{data.title}}">
+<ion-view view-title="{{data.title}}" class="app-bg">
 
 	<ion-content>
 	<!-- Content Starts Here -->
+		<div class="profile-img">
+			<div class="info-overlay">
+				<div class="info-content">
+					<h2 class="heading">Old Age</h2>
+					<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magnam, atque reprehenderit facere aliquid necessitatibus saepe quam suscipit accusamus quasi.</p>
+					<p class="no-margin-bottom">
+						<i class="ion-android-lock"></i>
+	                    <span>Private</span>
+					</p>
+				</div>
+			</div>
+			<img src="img/com-alzheimers.png" alt="Profile Imge of Arthur Welch" class="block">
+		</div>
 
+		<div class="item tabs tabs-secondary tabs-icon-left com-details-tab">
+		    <!-- <a class="tab-item" href="#">
+		     	<i class="icon ion-thumbsup"></i>
+		      	Like
+		    </a> -->
+		    <a class="tab-item" href="#">
+		      	<i class="icon ion-ios-compose"></i>
+		      	Post
+		    </a>
+		    <a class="tab-item" href="#">
+		      	<i class="icon ion-speakerphone"></i>
+		      	Event
+		    </a>
+		 </div>
+
+		<md-card class="tasks-card">
+	      	<md-card-content class="tasks-card-content">
+		        <md-item-content>
+		          	<div class="md-tile-left">
+		              	<img ng-src="img/profile-task-1.jpg" class="face" alt="">
+		          	</div>
+		          	<div class="md-tile-content">
+		            	<h3><strong>Task Title</strong></h3>
+		            	<h4>Lorem ipsum dolor sit amet.</h4>
+			            <p>
+			              	{{item.notes}}
+			            </p>
+		          	</div>
+		        </md-item-content>
+		        <div class="washed-out-10 tasks-footer">
+		          	<div class="item tabs tabs-secondary tabs-icon-left">
+					    <a class="tab-item" href="#">
+					      	<i class="icon ion-chatbox"></i>
+					      	Comment
+					    </a>
+					    <a class="tab-item" href="#">
+					     	<i class="icon ion-android-done"></i>
+					      	Accept
+					    </a>
+					 </div>
+				 </div>
+	      	</md-card-content>
+	    </md-card>
+
+		<md-card class="tasks-card">
+	      	<md-card-content class="tasks-card-content">
+		        <md-item-content>
+		          	<div class="md-tile-left">
+		              	<img ng-src="img/profile-task-2.jpg" class="face" alt="">
+		          	</div>
+		          	<div class="md-tile-content">
+		            	<h3><strong>Task Title</strong></h3>
+		            	<h4>Lorem ipsum dolor sit amet.</h4>
+			            <p>
+			              	{{item.notes}}
+			            </p>
+		          	</div>
+		        </md-item-content>
+		        <div class="washed-out-10 tasks-footer">
+		          	<div class="item tabs tabs-secondary tabs-icon-left">
+					    <a class="tab-item" href="#">
+					      	<i class="icon ion-chatbox"></i>
+					      	Comment
+					    </a>
+					    <a class="tab-item" href="#">
+					     	<i class="icon ion-android-done"></i>
+					      	Accept
+					    </a>
+					 </div>
+				 </div>
+	      	</md-card-content>
+	    </md-card>
 	<!-- Content Ends Here -->
 	</ion-content>
 </ion-view>

@@ -72,11 +72,11 @@ a.community-card  {
     text-decoration: none;
 }
 .listdemoBasicUsage .face {
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  width: 50px;
-  height: 50px;
-  margin: 16px; 
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    width: 50px;
+    height: 50px;
+    margin: 16px; 
 }
 
 .people .face {
@@ -120,7 +120,19 @@ a.community-card  {
     position: absolute;
     bottom: 10px;
     left: 0;
+    padding: 0 10px;
+    color: #fff !important;
 }
+
+.info-content .content {
+    line-height: 140%;
+}
+
+.info-content .heading {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: inherit; }
 
 .info-content > span {
     font-weight: 600;
@@ -134,9 +146,6 @@ a.community-card  {
     border-right: none;
 }
 
-.info-content > span:first-child {
-    margin-left: 10px;
-}
 
 .seek-help {
     padding-top: 15px;
@@ -175,3 +184,55 @@ a.community-card  {
 .no-padding-bottom { padding-bottom: 0; }
 .position-relative { position: relative; }
 .block { display: block; }
+
+
+.tab-item-lg {
+    font-size: 130%;
+}
+
+.tasks-card {
+    background: #fff;
+}
+
+.tasks-card .tasks-card-content {
+    padding: 10px;
+}
+
+.tasks-card .md-tile-left .face {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    width: 50px;
+    height: 50px;
+    margin: 5px; 
+    margin-right: 15px;
+}
+
+.washed-out-10 {
+    margin-left: -9px;
+    margin-right: -9px;
+}
+
+.tasks-footer {
+    margin-bottom: -10px;
+}
+
+.tasks-footer .item, .com-details-tab.item {
+    background: #fafafa;
+    border-width: 0px;
+    border-top: solid 1px #eee;
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.05);
+}
+
+.com-details-tab.item {
+    background: #fff;
+}
+
+.tasks-footer .tab-item, .com-details-tab.item .tab-item {
+    max-width: 100%;
+    font-size: 80% !important;
+}
+
+.tasks-footer .tab-item:first-child,
+.com-details-tab.item .tab-item:first-child {
+    border-right: solid 1px #eee;
+}

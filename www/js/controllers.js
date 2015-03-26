@@ -46,16 +46,30 @@ angular.module('starter.controllers', [])
   $scope.data = [];
 })
 
-.controller('PeopleCtrl', function($scope, $location) {
+.controller('PeopleCtrl', function($scope, $location, $ionicModal) {
   $scope.data = [];
   
   $scope.goToAdd = function() {
     $location.path('app/add-community');
   }
 
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/login.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeMap = function() {
+    $scope.modal.hide();
+  };
+
+  // Open the login modal
   $scope.showMap = function() {
-    $location.path('app/add-community');
-  }
+    $scope.modal.show();
+  };
+
 
 })
 

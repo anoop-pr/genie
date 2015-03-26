@@ -58,3 +58,7 @@ img {
 .text-muted {
     color: #727272;
 }
+
+a.community-card  {
+    text-decoration: none;
+}

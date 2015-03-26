@@ -42,6 +42,13 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('CommunityDetailCtrl', function($scope, $stateParams) {
+  $scope.data = {
+    title : $stateParams.name
+  }
+
+})
+
 .controller('AddCommunityCtrl', function($scope, $ionicPopup, $ionicLoading) {
   $scope.data = [];
 })

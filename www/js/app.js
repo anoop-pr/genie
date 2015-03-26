@@ -21,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {  
   $stateProvider
 
   .state('app', {
@@ -58,6 +58,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
         }
       }
     }) 
+
+    .state('app.community-details', {
+      url: "/community-details/:name",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/community-details.html",
+          controller: 'CommunityDetailCtrl'
+        }
+      }
+    }) 
+
 
     .state('app.people', {
       url: "/people",

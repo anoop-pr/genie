@@ -111,6 +111,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngMaterial'])
       }
     }) 
 
+    .state('app.pending', {
+      url: "/pending",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/pending.html"
+        }
+      }
+    }) 
+
     .state('app.profile', {
       url: "/profile",
       views: {

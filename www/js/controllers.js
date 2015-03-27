@@ -294,7 +294,7 @@ $scope.data = {
         row.push('<td>');
         if (day <= monthLength && (i > 0 || j >= startDay)) {
           if (day == 30) {
-            row.push('<div class="cal-day cal-highlight-event" data-cal="' + year + '/' + month + '/' + day + '"><span class="inner-task-count">7</span>');
+            row.push('<div class="cal-day cal-highlight-event" data-cal="' + year + '/' + month + '/' + day + '"><span class="inner-task-count">3</span>');
           } else if (dates.indexOf(day) != -1)  {
             row.push('<div class="cal-day cal-highlight" data-cal="' + year + '/' + month + '/' + day + '">');
           } else if (dates.indexOf(day) == -1){

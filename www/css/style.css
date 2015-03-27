@@ -329,3 +329,22 @@ md-tabs.md-default-theme md-tabs-ink-bar {
     height: 4px;
 }
 .no-wrap { white-space: nowrap; }
+
+.orange-btn {
+    background-color: #FC930A !important;
+}
+
+.navbar-icons {
+    font-size: 180% !important;
+}
+
+.side-menu-icons {
+    font-size: 150%;
+    margin-right: .3em;
+}
+
+.menu-text span {
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -7px;
+}

@@ -1,10 +1,12 @@
   
-<ion-view view-title="Arthur Welch">
+<ion-view view-title="Arthur Welch" class="app-bg">
 	<ion-nav-buttons side="right">
-		<button class="button button-icon button-clear ion-ios-location" ng-click="showMap()"></button>
+		<button class="button button-icon button-clear navbar-icons" ng-click="showMap()">
+			<i class="ion-ios-location"></i>
+		</button>
 	</ion-nav-buttons>
 
-	<md-button class="md-primary md-fab md-fab-bottom-right" ng-click="goToAdd()">
+	<md-button class="md-primary md-fab md-fab-bottom-right orange-btn" ng-click="goToAdd()">
 		<i class="icon ion-plus"></i>
 	</md-button>
 
@@ -28,13 +30,13 @@
 
 
 		<div class="content padding no-padding-bottom">
-			<h2 class="no-margin-bottom">Tasks</h2>
+			<h2 class="no-margin-bottom" style="margin-top:.4em;">Tasks</h2>
 		</div>
 		<div class="card tasks">
 		  	<div class="item item-text-wrap">
 		  	<h2 class="card-title">Administering Medication</h2>
 		    <p>Need to take 2 tablets - Amylin Mimetic, Wikoryl</p>
-		    <p>12:30PM</p>
+		    <p class="text-muted"><i class="icon ion-android-time"></i> 12:30PM</p>
 		  	</div>
 		</div>
 		<div class="card tasks">
@@ -42,7 +44,7 @@
 		  	<i class="task-completed ion-ios-checkmark"></i>
 		  	<h2 class="card-title">Take him to hospital</h2>
 		    <p>Drive him to hosital</p>
-		    <p>3:00PM</p>
+		    <p class="text-muted"><i class="icon ion-android-time"></i> 3:00PM</p>
 		  	</div>
 		</div>
 		<div class="card tasks">
@@ -50,7 +52,7 @@
 				<i class="task-completed ion-ios-checkmark"></i>
 			  	<h2 class="card-title">Excersices</h2>
 			    <p>Help him walk him 10mins</p>
-			    <p>05:00PM</p>
+			    <p class="text-muted"><i class="icon ion-android-time"></i> 05:00PM</p>
 		  	</div>
 		</div>
 
